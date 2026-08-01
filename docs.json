@@ -16,6 +16,14 @@
           "index",
           "quickstart"
         ]
+      },
+      "untitled-page-3",
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
       }
     ],
     "global": {
@@ -31,27 +39,7 @@
           "icon": "newspaper"
         }
       ]
-    },
-    "tabs": [
-      {
-        "tab": "All",
-        "pages": [
-          {
-            "group": "Getting Started",
-            "pages": [
-              "index",
-              "quickstart"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "Use Cases",
-        "pages": [
-          "untitled-page-3"
-        ]
-      }
-    ]
+    }
   },
   "logo": {
     "light": "/logo/light.svg",
