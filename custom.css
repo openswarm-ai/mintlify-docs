@@ -1,0 +1,79 @@
+/*
+ * Navbar redesign (desktop / lg breakpoint):
+ *   search on the left, logo centered, Support + theme toggle on the right.
+ *
+ * The Mint theme renders the navbar as three equal `flex-1` groups in source
+ * order: [logo] [search] [right]. We reorder them with flexbox `order` and
+ * flip the alignment inside the logo/search groups. These groups are
+ * `hidden lg:flex`, so this only affects the desktop navbar.
+ */
+
+/* Search group -> far left */
+#navbar div:has(> #search-bar-entry) {
+  order: 1;
+  justify-content: flex-start;
+}
+
+/* Search bar: no border/ring, half width */
+#search-bar-entry {
+  width: 50%;
+  box-shadow: none !important;
+}
+
+/* Logo group -> centered */
+#navbar div:has(> a > .nav-logo) {
+  order: 2;
+  justify-content: center;
+}
+
+/* Right group (Support link + theme toggle) -> far right */
+#navbar div:has(> nav[aria-label="Main"]) {
+  order: 3;
+}
+
+/*
+ * Command-K hint as two keycaps.
+ *
+ * Mintlify renders the shortcut as a single span containing the text "⌘K",
+ * so we can't wrap each glyph in its own element. Instead we hide the raw
+ * text (font-size: 0) and re-render "⌘" and "K" as ::before/::after pseudo
+ * elements, each styled as a bordered, filled key.
+ */
+#search-bar-entry > span {
+  font-size: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  justify-content: center;
+}
+
+#search-bar-entry > span::before,
+#search-bar-entry > span::after {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.25rem;
+  height: 1.25rem;
+  padding: 0 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgba(0, 0, 0, 0.05);
+  color: inherit;
+}
+
+#search-bar-entry > span::before {
+  content: "⌘";
+}
+
+#search-bar-entry > span::after {
+  content: "K";
+}
+
+/* Dark-mode keycaps */
+.dark #search-bar-entry > span::before,
+.dark #search-bar-entry > span::after {
+  border-color: rgba(255, 255, 255, 0.16);
+  background-color: rgba(255, 255, 255, 0.08);
+}
