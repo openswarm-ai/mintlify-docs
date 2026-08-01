@@ -1,3 +1,9 @@
+/* 
+========================================
+NAV BAR CUSTOMIZATION 
+========================================
+*/
+
 /*
  * Navbar redesign (desktop / lg breakpoint):
  *   search on the left, logo centered, Support + theme toggle on the right.
@@ -118,10 +124,14 @@ html[data-assistant-state="open"] #navbar div:has(> nav[aria-label="Main"]) {
 }
 
 
-.lead-story {
-  @apply prose dark:prose-invert max-w-none;
+/* 
+========================================
+NAV BAR CUSTOMIZATION 
+========================================
+*/
+
+.feed-content-parent-container {
   padding: 2rem;
   border-radius: 1rem;
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  color: blue;
+  max-width: 860px;
 }
