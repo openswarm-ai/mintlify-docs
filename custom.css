@@ -56,6 +56,21 @@
 }
 
 /*
+ * Hide the Ask Assistant button while the assistant panel is open (the button
+ * is redundant then). Mintlify sets `data-assistant-state="open"` on <html>
+ * when the panel opens. `!important` beats the button's `lg:flex` utility.
+ */
+html[data-assistant-state="open"] #assistant-entry {
+  display: none !important;
+}
+
+/* With the button hidden, drop the reserved space so Support + theme toggle
+   sit flush at the far right of the navbar. */
+html[data-assistant-state="open"] #navbar div:has(> nav[aria-label="Main"]) {
+  margin-right: 0;
+}
+
+/*
  * Command-K hint as two keycaps.
  *
  * Mintlify renders the shortcut as a single span containing the text "⌘K",
