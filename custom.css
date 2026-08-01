@@ -116,3 +116,12 @@ html[data-assistant-state="open"] #navbar div:has(> nav[aria-label="Main"]) {
   border-color: rgba(255, 255, 255, 0.16);
   background-color: rgba(255, 255, 255, 0.08);
 }
+
+
+.lead-story {
+  @apply prose dark:prose-invert max-w-none;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: linear-gradient(135deg, #1a1a2e, #16213e);
+  color: blue;
+}
