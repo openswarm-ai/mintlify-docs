@@ -122,16 +122,3 @@ html[data-assistant-state="open"] #navbar div:has(> nav[aria-label="Main"]) {
   border-color: rgba(255, 255, 255, 0.16);
   background-color: rgba(255, 255, 255, 0.08);
 }
-
-
-/* 
-========================================
-NAV BAR CUSTOMIZATION 
-========================================
-*/
-
-.feed-content-parent-container {
-  padding: 2rem;
-  border-radius: 1rem;
-  max-width: 860px;
-}

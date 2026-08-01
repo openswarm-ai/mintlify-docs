@@ -1,0 +1,15 @@
+export const FeedHeader = ({ title, videoSrc, description }) => {
+  const feedContainerStyle = {
+    padding: "2rem",
+    borderRadius: "1rem",
+    maxWidth: "860px",
+  };
+
+  return (
+    <div className="prose dark:prose-invert" style={feedContainerStyle}>
+      <h1>{title}</h1>
+      <video src={videoSrc} controls />
+      <p>{description}</p>
+    </div>
+  );
+};
