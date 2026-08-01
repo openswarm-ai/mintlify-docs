@@ -8,10 +8,14 @@
  * `hidden lg:flex`, so this only affects the desktop navbar.
  */
 
-/* Search group -> far left */
+/* Search group -> far left.
+   `position: static` drops this group's positioning context so the
+   absolutely-positioned Ask Assistant button anchors to the navbar's main
+   row (full width) instead of to this group's right edge. */
 #navbar div:has(> #search-bar-entry) {
   order: 1;
   justify-content: flex-start;
+  position: static;
 }
 
 /* Search bar: no border/ring, half width */
@@ -29,6 +33,26 @@
 /* Right group (Support link + theme toggle) -> far right */
 #navbar div:has(> nav[aria-label="Main"]) {
   order: 3;
+  /* Reserve room on the far right for the absolutely-positioned Ask
+     Assistant button so it doesn't overlap Support/toggle. Tune to the
+     button's label width. */
+  margin-right: 9.5rem;
+}
+
+/*
+ * Ask Assistant button -> pinned to the far right of the navbar,
+ * to the right of the theme toggle.
+ *
+ * The button is nested inside the center/search group, a different parent
+ * than the theme toggle, so flex `order` can't move it across. We instead
+ * absolutely position it against the navbar's `relative` main row and
+ * reserve space via the right group's margin-right (above).
+ */
+#assistant-entry {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /*
