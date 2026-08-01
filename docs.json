@@ -31,7 +31,27 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "tabs": [
+      {
+        "tab": "All",
+        "pages": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "index",
+              "quickstart"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Use Cases",
+        "pages": [
+          "untitled-page"
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
