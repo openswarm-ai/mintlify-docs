@@ -7,6 +7,12 @@
     "light": "#07C983",
     "dark": "#15803D"
   },
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/pages/conceptual/index"
+    }
+  ],
   "favicon": "/favicon.svg",
   "navigation": {
     "global": {
@@ -25,10 +31,10 @@
     },
     "groups": [
       {
-        "group": "Getting Started",
+        "group": "Conceptual",
         "pages": [
-          "index",
-          "quickstart"
+          "/pages/conceptual/index",
+          "/pages/conceptual/quickstart"
         ]
       },
       {
@@ -37,8 +43,8 @@
           {
             "group": "Lead Gen",
             "pages": [
-              "page-uc-lead-gen",
-              "body-uc-lead-gen"
+              "/pages/use-cases/main",
+              "/pages/use-cases/content"
             ]
           }
         ]
