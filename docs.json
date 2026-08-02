@@ -9,25 +9,6 @@
   },
   "favicon": "/favicon.svg",
   "navigation": {
-    "pages": [
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      },
-      "untitled-page-3",
-      {
-        "group": "Getting Started",
-        "pages": [
-          "index",
-          "quickstart"
-        ]
-      },
-      "page-uc-lead-gen",
-      "body-uc-lead-gen"
-    ],
     "global": {
       "anchors": [
         {
@@ -41,7 +22,28 @@
           "icon": "newspaper"
         }
       ]
-    }
+    },
+    "groups": [
+      {
+        "group": "Getting Started",
+        "pages": [
+          "index",
+          "quickstart"
+        ]
+      },
+      {
+        "group": "Use Cases",
+        "pages": [
+          {
+            "group": "Lead Gen",
+            "pages": [
+              "page-uc-lead-gen",
+              "body-uc-lead-gen"
+            ]
+          }
+        ]
+      }
+    ]
   },
   "logo": {
     "light": "/logo/light.svg",
