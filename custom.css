@@ -122,3 +122,23 @@ html[data-assistant-state="open"] #navbar div:has(> nav[aria-label="Main"]) {
   border-color: rgba(255, 255, 255, 0.16);
   background-color: rgba(255, 255, 255, 0.08);
 }
+
+
+
+
+
+/* 
+========================================
+Feed Page
+========================================
+*/
+
+.feed-page-container {
+  display: flex;
+  width: 100%;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: row;
+  gap: 2rem;
+  padding-top: 2rem;
+}
