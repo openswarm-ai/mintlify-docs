@@ -140,5 +140,5 @@ Feed Page
   justify-content: center;
   flex-direction: row;
   gap: 2rem;
-  padding-top: 2rem;
+  padding: 2rem 1rem;
 }
